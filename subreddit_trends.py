@@ -1,3 +1,5 @@
+# subreddit_trends.py
+
 import praw
 import os
 import re
@@ -169,7 +171,7 @@ if __name__ == "__main__":
                     trends_with_posts[trend_title].append(post)
 
             # Final step: Generate and save the detailed Markdown report
-            OUTPUT_FILENAME = os.path.join("results", f"{SUBREDDIT_TO_ANALYZE}_trend_report_{datetime.now().strftime('%Y-%m-%d')}.md")
+            OUTPUT_FILENAME = os.path.join("trends", f"{SUBREDDIT_TO_ANALYZE}_trend_report_{datetime.now().strftime('%Y-%m-%d')}.md")
             with open(OUTPUT_FILENAME, 'w', encoding='utf-8') as f:
                 f.write(f"# Trend Report for r/{SUBREDDIT_TO_ANALYZE}\n")
                 f.write(f"**Generated on:** {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n")
