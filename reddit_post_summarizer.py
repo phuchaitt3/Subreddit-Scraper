@@ -119,7 +119,7 @@ def generate_abstractive_summary(key_sentences: list[str], client: OpenAI, model
 if __name__ == "__main__":
     download_nltk_data_if_needed()
     client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-    OUTPUT_DIR = "post_summaries"
+    OUTPUT_DIR = "reddit_summaries"
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
     reddit_url = input("Please enter the Reddit Post URL for a deep-dive summary: ")
